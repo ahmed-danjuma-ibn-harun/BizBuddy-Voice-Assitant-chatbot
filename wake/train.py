@@ -119,7 +119,7 @@ def main(args):
         if test_acc > best_test_acc:
             best_test_acc = test_acc
 
-        # saves checkpoint if metrics are better than last
+        # saves the best checkpoint
         if args.save_checkpoint_path and test_acc >= best_test_acc:
             checkpoint_path = os.path.join(args.save_checkpoint_path, args.model_name + ".pth")
             print("found best checkpoint. saving model as", checkpoint_path)
